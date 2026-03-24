@@ -5,20 +5,20 @@
 class Poma < Formula
   desc "CLI for the POMA AI API"
   homepage "https://github.com/poma-ai/poma-cli"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.8/poma-cli_0.1.8_darwin_amd64.tar.gz"
-      sha256 "f6bec0c0fa90ca1eeb53f01785fbff553232ba316f8af1d5669478b0ef39be57"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_darwin_amd64.tar.gz"
+      sha256 "57caa5a1591c08613a32816d208c01965c9a5890158fb897aee30b2c606c6428"
 
       define_method(:install) do
         bin.install "poma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.8/poma-cli_0.1.8_darwin_arm64.tar.gz"
-      sha256 "789eb6ec1351e64beb5c92d07d0b0adba7feb12e6ef73078872645b7e792af24"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_darwin_arm64.tar.gz"
+      sha256 "b812c877da4826357df40ed9563f694950ae325009bc746bc1cdf7662cf952e9"
 
       define_method(:install) do
         bin.install "poma"
@@ -28,15 +28,15 @@ class Poma < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.8/poma-cli_0.1.8_linux_amd64.tar.gz"
-      sha256 "39ad2eb97faa72d94f860b2d3825d16360102f98098f7c95480003dec653e4b0"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_linux_amd64.tar.gz"
+      sha256 "7ef4d8416cb5f55d28319cce90dfeccfa7f9cceab6e8f491b56ac2b5d5d59719"
       define_method(:install) do
         bin.install "poma"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.8/poma-cli_0.1.8_linux_arm64.tar.gz"
-      sha256 "f5958cb0fecc518e5185a02248e0da97dc5f79e5b5caa320f713a368066aa021"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_linux_arm64.tar.gz"
+      sha256 "186466c8960f448e27286ae901f6659a53a59e88715d9217dc117d5ac6856d6f"
       define_method(:install) do
         bin.install "poma"
       end
