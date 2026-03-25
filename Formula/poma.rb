@@ -5,20 +5,20 @@
 class Poma < Formula
   desc "CLI for the POMA AI API"
   homepage "https://github.com/poma-ai/poma-cli"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_darwin_amd64.tar.gz"
-      sha256 "57caa5a1591c08613a32816d208c01965c9a5890158fb897aee30b2c606c6428"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.10/poma-cli_0.1.10_darwin_amd64.tar.gz"
+      sha256 "d5690b6779cdfd871d2fd4c795ab99e44eaec41119f2da060cbfba7481638523"
 
       define_method(:install) do
         bin.install "poma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_darwin_arm64.tar.gz"
-      sha256 "b812c877da4826357df40ed9563f694950ae325009bc746bc1cdf7662cf952e9"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.10/poma-cli_0.1.10_darwin_arm64.tar.gz"
+      sha256 "eef01026928dc8bca945087087ece6e61ccdbdc1e4119a6b3d03520a43bbc865"
 
       define_method(:install) do
         bin.install "poma"
@@ -28,15 +28,15 @@ class Poma < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_linux_amd64.tar.gz"
-      sha256 "7ef4d8416cb5f55d28319cce90dfeccfa7f9cceab6e8f491b56ac2b5d5d59719"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.10/poma-cli_0.1.10_linux_amd64.tar.gz"
+      sha256 "dfdab943f98f5897c3a448f6ebbe0049cc329f3ae358aefc2dafc13d05e2c3da"
       define_method(:install) do
         bin.install "poma"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.9/poma-cli_0.1.9_linux_arm64.tar.gz"
-      sha256 "186466c8960f448e27286ae901f6659a53a59e88715d9217dc117d5ac6856d6f"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.10/poma-cli_0.1.10_linux_arm64.tar.gz"
+      sha256 "c1184e4723fe649fbd56dc5287cb5d8556e16b4da10fc32ceb5b2c485281fbbe"
       define_method(:install) do
         bin.install "poma"
       end
@@ -51,7 +51,7 @@ class Poma < Formula
 
   def caveats
     <<~EOS
-      Authenticated commands need a JWT: export POMA_API_TOKEN or use --token / --json.
+      Authenticated commands need a JWT: export POMA_API_KEY or use --token / --json.
     EOS
   end
 
