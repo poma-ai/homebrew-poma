@@ -5,20 +5,20 @@
 class Poma < Formula
   desc "CLI for the POMA AI API"
   homepage "https://github.com/poma-ai/poma-cli"
-  version "0.1.15"
+  version "0.1.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.15/poma-cli_0.1.15_darwin_amd64.tar.gz"
-      sha256 "282dd9c2cc4b26e1e0a8ef6329b53e9b88eef50f56d6be637970114a2b17f3e6"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.16/poma-cli_0.1.16_darwin_amd64.tar.gz"
+      sha256 "d92964aa046a05c974151c269bb3dd9666e4bbecc4d1b4b14e5de99630d559a0"
 
       define_method(:install) do
         bin.install "poma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.15/poma-cli_0.1.15_darwin_arm64.tar.gz"
-      sha256 "84ea82181197aca9a1817edf5461d82e87d68aecb670f7a10a31e233cf763c63"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.16/poma-cli_0.1.16_darwin_arm64.tar.gz"
+      sha256 "847de88e32920f1d8f0287b40470687d90eaf46ce85dee76f587360469bf1244"
 
       define_method(:install) do
         bin.install "poma"
@@ -28,15 +28,15 @@ class Poma < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.15/poma-cli_0.1.15_linux_amd64.tar.gz"
-      sha256 "f1617cf1651a6f97b9a7e550a27afb890fec6c47b669ed9dd9bca1cc12c32d9e"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.16/poma-cli_0.1.16_linux_amd64.tar.gz"
+      sha256 "c715efca87f0f86efe87a4b563e1e53e7a44ff6e07d66251dab97e25daca2a23"
       define_method(:install) do
         bin.install "poma"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.15/poma-cli_0.1.15_linux_arm64.tar.gz"
-      sha256 "986ab776bff2051a35f418e6333a335c9994c6d68591846b4d69274efd6fc725"
+      url "https://github.com/poma-ai/poma-cli/releases/download/v0.1.16/poma-cli_0.1.16_linux_arm64.tar.gz"
+      sha256 "932e4016c39a31fad3502c7b0afcd9a02d492779d8ea268c79424829d16708b0"
       define_method(:install) do
         bin.install "poma"
       end
